@@ -58,7 +58,7 @@ case "$CFID" in
   1719135) HEX=45C97E; SLUG=alc ;;
   1719519) HEX=ECEDEF; SLUG=hub ;;
   1721476) HEX=9B7BFF; SLUG=asr ;;                 # Arbiter Soft Reserve
-  1771140) HEX=9AA0A8; SLUG=bounty-board ;;           # Allemano Bounty Board
+  1771140) HEX=E040A0; SLUG=bounty-board ;;           # Allemano Bounty Board
   *) HEX=ECEDEF; SLUG="" ;;
 esac
 COLOR=$((16#$HEX))

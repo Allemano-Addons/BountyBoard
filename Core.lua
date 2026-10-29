@@ -32,7 +32,7 @@ end
 
 function BB:Print(text, ...)
     local msg = select("#", ...) > 0 and format(text, ...) or text
-    if DEFAULT_CHAT_FRAME then DEFAULT_CHAT_FRAME:AddMessage("|cff9aa0a8Bounty Board|r " .. msg) end
+    if DEFAULT_CHAT_FRAME then DEFAULT_CHAT_FRAME:AddMessage("|cffe040a0Bounty Board|r " .. msg) end
 end
 
 -- /bb debug turns this on; nothing is printed otherwise.
@@ -279,7 +279,7 @@ end
 -- realm and guild (db.guilds["Realm|Guild"]).
 -- ---------------------------------------------------------------------------
 local DEFAULT_SETTINGS = {
-    debug = false, accent = "9AA0A8", window = {},
+    debug = false, accent = "E040A0", window = {},
     toasts = true, toastTaken = true, toastDelivery = true, toastPayment = true, soundChoice = "toast", typeColors = true,
     launcherShown = true, autoHunt = true, guildPostRank = 1, font = "barlow", textSize = "M", scale = 1, defaultTab = "board", lastTab = "board", historyDays = 30,
 }
@@ -301,7 +301,8 @@ local function initDB()
     db.guilds = type(db.guilds) == "table" and db.guilds or {}
     if db.settings.sound == false then db.settings.soundChoice = "none" end -- the old on/off switch
     db.settings.sound = nil
-    if db.settings.accent == "3FD0E0" then db.settings.accent = nil end -- the first builds were cyan; the accent is silver
+    -- the first builds were cyan, then silver; the accent is magenta now
+    if db.settings.accent == "3FD0E0" or db.settings.accent == "9AA0A8" then db.settings.accent = nil end
     fill(db.settings, DEFAULT_SETTINGS)
     BB.db = db
 end

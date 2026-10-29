@@ -1,4 +1,4 @@
--- Class colours of names, "completed 2 min ago" on finished cards, the silver accent.
+-- Class colours of names, "completed 2 min ago" on finished cards, the magenta accent.
 local H = require("harness")
 
 return function(T)
@@ -8,9 +8,13 @@ return function(T)
     world:advance(20)
     local A, B = alice.BB, bob.BB
 
-    T.equal(A.db.settings.accent, "9AA0A8", "the accent is silver")
+    T.equal(A.db.settings.accent, "E040A0", "the accent is magenta")
     local r, g, b = A.Theme:Accent()
-    T.check(math.abs(r - 0x9A / 255) < 0.01 and math.abs(b - 0xA8 / 255) < 0.01, "and Theme gives silver")
+    T.check(math.abs(r - 0xE0 / 255) < 0.01 and math.abs(g - 0x40 / 255) < 0.01 and math.abs(b - 0xA0 / 255) < 0.01, "and Theme gives magenta")
+    local hr, hg, hb = A.Theme:AccentHover()
+    T.check(hr > r and hg > g and hb > b, "hover is lighter")
+    local pr, pg, pb = A.Theme:AccentPressed()
+    T.check(pr < r and pg < g and pb < b, "pressed is darker")
 
     -- the creator's class travels with the bounty
     local bounty = A.Data.Post({ itemID = 12359, quantity = 5, reward = 100, days = 1, note = "" })

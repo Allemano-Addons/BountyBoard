@@ -446,19 +446,22 @@ function W.Button(parent, label, style, onClick)
         W.RoundBorder(b.border)
     end
 
-    -- The accent button: the accent mixed into the field colour (so it is clearly lit, also when the accent is grey),
-    -- bright text; lighter on hover with a lighter border, darker when pressed. A disabled one is flat with faint text.
-    local function mix(from, to, t) return from[1] + (to[1] - from[1]) * t, from[2] + (to[2] - from[2]) * t, from[3] + (to[3] - from[3]) * t end
+    -- The accent button: filled with the accent, bright text and a 1 px border of a lighter shade; lighter on hover,
+    -- darker when pressed. A disabled one is flat with faint text.
     local function paintAccent(self)
-        local field = { Theme:Color("field") }
-        local accent = { Theme:Accent() }
-        local amount, borderAmount = 0.42, 0.75
-        if self.pressed then amount, borderAmount = 0.30, 0.6
-        elseif self.hover then amount, borderAmount = 0.56, 1 end
-        self.bg:SetColorTexture(mix(field, accent, amount))
-        local r, g, bl = mix(field, accent, borderAmount)
-        if self.hover and not self.pressed then r, g, bl = mix({ r, g, bl }, { 1, 1, 1 }, 0.25) end
-        self.border:SetColor(r, g, bl, 1)
+        local fill, border
+        if self.pressed then
+            fill = { Theme:AccentPressed() }
+            border = { Theme:Accent() }
+        elseif self.hover then
+            fill = { Theme:AccentHover() }
+            border = { 1, 1, 1 }
+        else
+            fill = { Theme:Accent() }
+            border = { Theme:AccentHover() }
+        end
+        self.bg:SetColorTexture(fill[1], fill[2], fill[3])
+        self.border:SetColor(border[1], border[2], border[3], 1)
         self.text:SetTextColor(Theme:Color("text"))
     end
 

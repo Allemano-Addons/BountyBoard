@@ -60,12 +60,23 @@ function Theme:Color(key)
     return c[1], c[2], c[3]
 end
 
--- The accent: silver (as the brand library says) unless the saved settings say another "RRGGBB".
+-- The accent: hot magenta unless the saved settings say another "RRGGBB".
+Theme.DEFAULT_ACCENT = "E040A0"
 function Theme:Accent()
     local s = BB.db and BB.db.settings
     local value = s and s.accent
-    if type(value) ~= "string" or #value ~= 6 or not tonumber(value, 16) then value = "9AA0A8" end
+    if type(value) ~= "string" or #value ~= 6 or not tonumber(value, 16) then value = Theme.DEFAULT_ACCENT end
     return hex(value)
+end
+
+-- Hover is the accent a little lighter (E040A0 gives about E85CB0), pressed a little darker (about C4338A).
+function Theme:AccentHover()
+    local r, g, b = self:Accent()
+    return r + (1 - r) * 0.15, g + (1 - g) * 0.15, b + (1 - b) * 0.15
+end
+function Theme:AccentPressed()
+    local r, g, b = self:Accent()
+    return r * 0.88, g * 0.88, b * 0.88
 end
 
 function Theme:TextSize(delta)
