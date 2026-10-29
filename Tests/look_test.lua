@@ -8,9 +8,9 @@ return function(T)
     world:advance(20)
     local A, B = alice.BB, bob.BB
 
-    T.equal(A.db.settings.accent, "E040A0", "the accent is magenta")
+    T.equal(A.db.settings.accent, "D457E6", "the accent is magenta")
     local r, g, b = A.Theme:Accent()
-    T.check(math.abs(r - 0xE0 / 255) < 0.01 and math.abs(g - 0x40 / 255) < 0.01 and math.abs(b - 0xA0 / 255) < 0.01, "and Theme gives magenta")
+    T.check(math.abs(r - 0xD4 / 255) < 0.01 and math.abs(g - 0x57 / 255) < 0.01 and math.abs(b - 0xE6 / 255) < 0.01, "and Theme gives magenta")
     local hr, hg, hb = A.Theme:AccentHover()
     T.check(hr > r and hg > g and hb > b, "hover is lighter")
     local pr, pg, pb = A.Theme:AccentPressed()

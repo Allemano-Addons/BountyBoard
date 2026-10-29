@@ -1,7 +1,11 @@
 # Changelog
 
+## 0.1.2-beta
+- **The accent is the brand library's magenta (D457E6)**, the same as the Allemano logo family uses, instead of 0.1.1's own shade.
+  The launcher button and the addon list icon are the library's magenta mark too.
+
 ## 0.1.1-beta
-- **A new accent colour: hot magenta.** The tab underline, progress bars, selected filters, the launcher button's frame on mouse over
+- **A new accent colour: magenta.** The tab underline, progress bars, selected filters, the launcher button's frame on mouse over
   and the notification stripe follow it. The main buttons (Post Bounty, Take Job and the like) are now filled with the colour, with
   light text, a lighter border, a lighter shade on hover and a darker one when pressed. Cancelled and expired bounties stay grey,
   finished ones green.

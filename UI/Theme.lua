@@ -60,8 +60,8 @@ function Theme:Color(key)
     return c[1], c[2], c[3]
 end
 
--- The accent: hot magenta unless the saved settings say another "RRGGBB".
-Theme.DEFAULT_ACCENT = "E040A0"
+-- The accent: magenta (D457E6, from the brand library) unless the saved settings say another "RRGGBB".
+Theme.DEFAULT_ACCENT = "D457E6"
 function Theme:Accent()
     local s = BB.db and BB.db.settings
     local value = s and s.accent
@@ -69,7 +69,7 @@ function Theme:Accent()
     return hex(value)
 end
 
--- Hover is the accent a little lighter (E040A0 gives about E85CB0), pressed a little darker (about C4338A).
+-- Hover is the accent a little lighter (D457E6 gives about DA70EA), pressed a little darker (about BA4DCA).
 function Theme:AccentHover()
     local r, g, b = self:Accent()
     return r + (1 - r) * 0.15, g + (1 - g) * 0.15, b + (1 - b) * 0.15
