@@ -1,7 +1,7 @@
 ## Interface: 16001
 ## Title: Allemano Bounty Board
 ## Notes: A guild job board for WoW Forever: post a bounty, someone takes it, everyone gets paid. Part of Allemano Addons.
-## Version: 0.1.0-beta
+## Version: 0.1.1-beta
 ## Author: Allemano
 ## Category: Guild
 ## SavedVariables: AllemanoBountyBoardDB

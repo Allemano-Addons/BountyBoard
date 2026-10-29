@@ -4,7 +4,7 @@ A guild job board for WoW Classic. A guildmate posts a **bounty** ("20x Thorium 
 guildmate **takes the job**, brings the items, and the addon checks the trade and marks the bounty delivered and paid.
 Part of the Allemano Addons family. Commands: `/bb` or `/bounty`.
 
-Status: **0.1.0-beta, the first release.** Made for WoW Forever (Interface 16001); a TBC Classic build (Interface 20506) is included for testing.
+Status: **0.1.1-beta, the first release.** Made for WoW Forever (Interface 16001); a TBC Classic build (Interface 20506) is included for testing.
 
 ## What it does
 - **Board**: every open bounty of your guild as cards (item, quantity, reward, creator, time left, progress). Filter

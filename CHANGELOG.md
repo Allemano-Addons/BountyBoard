@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1-beta
+- **A new accent colour: hot magenta.** The tab underline, progress bars, selected filters, the launcher button's frame on mouse over
+  and the notification stripe follow it. The main buttons (Post Bounty, Take Job and the like) are now filled with the colour, with
+  light text, a lighter border, a lighter shade on hover and a darker one when pressed. Cancelled and expired bounties stay grey,
+  finished ones green.
+
 ## 0.1.0-beta
 - First playable version for TBC Classic: board, Post Bounty, Take Job, cancel, expiry, guild sync, live bag
   progress, trade verification (delivered / paid), My Bounties, My Jobs, History, toasts.

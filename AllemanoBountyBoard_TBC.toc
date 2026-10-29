@@ -1,7 +1,7 @@
 ## Interface: 20506
 ## Title: Allemano Bounty Board
 ## Notes: A guild job board for WoW: The Burning Crusade (development build). Part of Allemano Addons.
-## Version: 0.1.0-beta
+## Version: 0.1.1-beta
 ## Author: Allemano
 ## Category: Guild
 ## SavedVariables: AllemanoBountyBoardDB
