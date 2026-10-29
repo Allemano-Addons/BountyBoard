@@ -1,0 +1,6 @@
+*.lua text eol=crlf
+*.toc text eol=crlf
+*.md text eol=crlf
+*.tga binary
+*.ttf binary
+*.png binary

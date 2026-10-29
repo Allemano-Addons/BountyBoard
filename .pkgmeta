@@ -1,0 +1,15 @@
+package-as: AllemanoBountyBoard
+
+ignore:
+  - .luacheckrc
+  - .gitattributes
+  - .github
+  - docs
+  - mockups
+  - Tests
+  - CLAUDE.md
+  - AllemanoBountyBoard_TBC.toc
+
+manual-changelog:
+  filename: CHANGELOG.md
+  markup-type: markdown

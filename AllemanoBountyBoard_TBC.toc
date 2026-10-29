@@ -1,0 +1,24 @@
+## Interface: 20506
+## Title: Allemano Bounty Board
+## Notes: A guild job board for WoW: The Burning Crusade (development build). Part of Allemano Addons.
+## Version: 0.1.0-beta
+## Author: Allemano
+## Category: Guild
+## SavedVariables: AllemanoBountyBoardDB
+## X-Curse-Project-ID: 1771140
+## IconTexture: Interface\AddOns\AllemanoBountyBoard\Media\wow\icon
+
+Core.lua
+Data.lua
+Comm.lua
+Progress.lua
+Kill.lua
+Trade.lua
+UI\Theme.lua
+UI\Widgets.lua
+UI\Toast.lua
+UI\PostDialog.lua
+UI\Settings.lua
+UI\Board.lua
+UI\Main.lua
+UI\Launcher.lua
